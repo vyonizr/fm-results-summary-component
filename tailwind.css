@@ -1,0 +1,23 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+main {
+  @apply font-grotesk font-medium;
+}
+
+#grad-circle {
+  background-image: linear-gradient(hsla(256, 72%, 46%, 1), hsla(256, 72%, 46%, 0));
+}
+
+#grad-result-box {
+  background-image: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+}
+
+.stat:not(:first-of-type) {
+  @apply mt-4;
+}
+
+button:hover {
+  background-image: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+}

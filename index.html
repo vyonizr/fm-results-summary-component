@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Frontend Mentor | Results summary component</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div
+        class="flex flex-col items-center rounded-b-3xl px-12 pb-8 pt-4 text-center"
+        id="grad-result-box"
+      >
+        <h1 class="text-lg text-lightLavender">Your Result</h1>
+        <div
+          class="mt-5 flex h-32 w-32 flex-col items-center justify-center rounded-full"
+          id="grad-circle"
+        >
+          <p class="font-grotesk text-6xl font-extrabold text-white">76</p>
+          <p class="text-paleBlue">of 100</p>
+        </div>
+        <p class="mt-5 text-2xl text-white">Great</p>
+        <p class="mt-1 text-lightLavender">
+          You scored higher than 65% of the people who have taken these tests.
+        </p>
+      </div>
+      <div class="px-8 text-darkGrayBlue">
+        <h2 class="mt-4 text-lg font-bold">Summary</h2>
+        <div
+          class="stat mt-4 flex justify-between rounded-xl p-4"
+          style="background-color: hsla(0, 100%, 67%, 0.05)"
+        >
+          <div class="flex">
+            <img src="/assets/images/icon-reaction.svg" alt="reaction icon" />
+            <p class="ml-2 text-lightRed">Reaction</p>
+          </div>
+          <p class="font-bold">
+            80 &nbsp;<span class="text-lightLavender">/ 100</span>
+          </p>
+        </div>
+        <div
+          class="stat flex justify-between rounded-xl p-4"
+          style="background-color: hsla(39, 100%, 56%, 0.05)"
+        >
+          <div class="flex">
+            <img src="/assets/images/icon-memory.svg" alt="memory icon" />
+            <p class="ml-2 text-orangeyYellow">Memory</p>
+          </div>
+          <p class="font-bold">
+            92 &nbsp;<span class="text-lightLavender">/ 100</span>
+          </p>
+        </div>
+        <div
+          class="stat flex justify-between rounded-xl p-4"
+          style="background-color: hsla(166, 100%, 37%, 0.05)"
+        >
+          <div class="flex">
+            <img src="/assets/images/icon-verbal.svg" alt="verbal icon" />
+            <p class="ml-2 text-greenTeal">Verbal</p>
+          </div>
+          <p class="font-bold">
+            61 &nbsp;<span class="text-lightLavender">/ 100</span>
+          </p>
+        </div>
+        <div
+          class="stat flex justify-between rounded-xl p-4"
+          style="background-color: hsla(234, 85%, 45%, 0.05)"
+        >
+          <div class="flex">
+            <img src="/assets/images/icon-visual.svg" alt="visual icon" />
+            <p class="ml-2 text-cobaltBlue">Visual</p>
+          </div>
+          <p class="font-bold">
+            72 &nbsp;<span class="text-lightLavender">/ 100</span>
+          </p>
+        </div>
+        <button class="mt-6 w-full rounded-full bg-darkGrayBlue p-3 text-white">
+          Continue
+        </button>
+      </div>
+    </main>
+    <footer class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Your Name Here</a>.
+    </footer>
+  </body>
+</html>
