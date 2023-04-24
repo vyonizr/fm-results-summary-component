@@ -31,73 +31,71 @@
       }
     </style>
   </head>
-  <body>
-    <main>
+  <body
+    class="md:flex md:h-screen md:flex-col md:items-center md:justify-center"
+  >
+    <main
+      class="md:grid md:h-[27rem] md:w-[37.5rem] md:grid-cols-2 md:overflow-hidden md:rounded-3xl md:shadow-xl"
+    >
       <div
-        class="flex flex-col items-center rounded-b-3xl px-12 pb-8 pt-4 text-center"
+        class="flex flex-col items-center rounded-b-3xl px-12 pb-8 pt-4 text-center md:justify-between md:rounded-3xl md:px-8 md:pb-11 md:pt-7"
         id="grad-result-box"
       >
         <h1 class="text-lg text-lightLavender">Your Result</h1>
         <div
-          class="mt-5 flex h-32 w-32 flex-col items-center justify-center rounded-full"
+          class="mt-4 flex h-32 w-32 flex-col items-center justify-center rounded-full md:mt-4 md:h-44 md:w-44"
           id="grad-circle"
         >
-          <p class="font-grotesk text-6xl font-extrabold text-white">76</p>
+          <p
+            class="font-grotesk text-6xl font-extrabold text-white md:font-bold"
+          >
+            76
+          </p>
           <p class="text-paleBlue">of 100</p>
         </div>
-        <p class="mt-5 text-2xl text-white">Great</p>
-        <p class="mt-1 text-lightLavender">
+        <p class="mt-4 text-2xl text-white md:mt-0 md:text-2xl">Great</p>
+        <p class="mt-2 text-lightLavender md:mt-0">
           You scored higher than 65% of the people who have taken these tests.
         </p>
       </div>
-      <div class="px-8 text-darkGrayBlue">
-        <h2 class="mt-4 text-lg font-bold">Summary</h2>
-        <div
-          class="stat mt-4 flex justify-between rounded-xl p-4"
-          style="background-color: hsla(0, 100%, 67%, 0.05)"
-        >
+      <div
+        class="flex flex-col justify-between px-8 text-darkGrayBlue md:pb-11 md:pt-7"
+      >
+        <h2 class="mt-4 text-lg font-bold md:mt-0">Summary</h2>
+        <div class="stat" style="background-color: hsla(0, 100%, 67%, 0.05)">
           <div class="flex">
             <img src="/assets/images/icon-reaction.svg" alt="reaction icon" />
             <p class="ml-2 text-lightRed">Reaction</p>
           </div>
           <p class="font-bold">
-            80 &nbsp;<span class="text-lightLavender">/ 100</span>
+            80 &nbsp;<span class="opacity-40">/ 100</span>
           </p>
         </div>
-        <div
-          class="stat flex justify-between rounded-xl p-4"
-          style="background-color: hsla(39, 100%, 56%, 0.05)"
-        >
+        <div class="stat" style="background-color: hsla(39, 100%, 56%, 0.05)">
           <div class="flex">
             <img src="/assets/images/icon-memory.svg" alt="memory icon" />
             <p class="ml-2 text-orangeyYellow">Memory</p>
           </div>
           <p class="font-bold">
-            92 &nbsp;<span class="text-lightLavender">/ 100</span>
+            92 &nbsp;<span class="opacity-40">/ 100</span>
           </p>
         </div>
-        <div
-          class="stat flex justify-between rounded-xl p-4"
-          style="background-color: hsla(166, 100%, 37%, 0.05)"
-        >
+        <div class="stat" style="background-color: hsla(166, 100%, 37%, 0.05)">
           <div class="flex">
             <img src="/assets/images/icon-verbal.svg" alt="verbal icon" />
             <p class="ml-2 text-greenTeal">Verbal</p>
           </div>
           <p class="font-bold">
-            61 &nbsp;<span class="text-lightLavender">/ 100</span>
+            61 &nbsp;<span class="opacity-40">/ 100</span>
           </p>
         </div>
-        <div
-          class="stat flex justify-between rounded-xl p-4"
-          style="background-color: hsla(234, 85%, 45%, 0.05)"
-        >
+        <div class="stat" style="background-color: hsla(234, 85%, 45%, 0.05)">
           <div class="flex">
             <img src="/assets/images/icon-visual.svg" alt="visual icon" />
             <p class="ml-2 text-cobaltBlue">Visual</p>
           </div>
           <p class="font-bold">
-            72 &nbsp;<span class="text-lightLavender">/ 100</span>
+            72 &nbsp;<span class="opacity-40">/ 100</span>
           </p>
         </div>
         <button class="mt-6 w-full rounded-full bg-darkGrayBlue p-3 text-white">
@@ -109,7 +107,10 @@
       Challenge by
       <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
         >Frontend Mentor</a
-      >. Coded by <a href="#">Your Name Here</a>.
+      >. Coded by
+      <a href="https://www.frontendmentor.io/profile/vyonizr" target="_blank"
+        >vyonizr</a
+      >.
     </footer>
   </body>
 </html>

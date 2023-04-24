@@ -4,10 +4,15 @@
   "description": "",
   "main": "index.html",
   "scripts": {
-    "dev:css": "tailwindcss -i ./tailwind.css -o ./style.css --watch"
+    "dev:css": "tailwindcss -i ./tailwind.css -o ./style.css --watch",
+    "build:css": "tailwindcss -i ./tailwind.css -o ./style.css --minify"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "html",
+    "css",
+    "tailwindcss"
+  ],
+  "author": "Fitrahtur Rahman <vyonizr@gmail.com>",
   "license": "ISC",
   "devDependencies": {
     "prettier": "^2.8.8",
