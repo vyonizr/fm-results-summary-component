@@ -15,11 +15,15 @@ main {
 }
 
 .stat:not(:first-of-type) {
-  @apply mt-4 md:mt-2;
+  @apply mt-4;
+}
+
+.stat:first-of-type {
+  @apply mt-6 md:mt-7;
 }
 
 .stat {
-  @apply flex justify-between rounded-xl p-4;
+  @apply flex justify-between rounded-xl px-4 py-[1.125rem] md:py-4;
 }
 
 button:hover {
