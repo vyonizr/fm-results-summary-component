@@ -49,9 +49,8 @@
         >
           <p
             class="font-grotesk text-[3.5rem] font-extrabold text-white md:text-7xl md:font-bold"
-          >
-            76
-          </p>
+            id="average-score"
+          ></p>
           <p class="text-paleBlue md:text-lg">of 100</p>
         </div>
         <p
@@ -62,7 +61,8 @@
         <p
           class="mt-2 w-[16.25rem] text-lightLavender md:mt-0 md:mt-3.5 md:text-lg"
         >
-          You scored higher than 65% of the people who have taken these tests.
+          You scored higher than <span id="percentage">0%</span> of the people
+          who have taken these tests.
         </p>
       </div>
       <div
@@ -75,7 +75,9 @@
             <p class="ml-2 text-lightRed">Reaction</p>
           </div>
           <p class="font-bold">
-            80 &nbsp;<span class="opacity-50">/ 100</span>
+            <span id="reaction-score">0</span>&nbsp;<span class="opacity-50"
+              >/ 100</span
+            >
           </p>
         </div>
         <div class="stat" style="background-color: hsla(39, 100%, 56%, 0.05)">
@@ -84,7 +86,9 @@
             <p class="ml-2 text-orangeyYellow">Memory</p>
           </div>
           <p class="font-bold">
-            92 &nbsp;<span class="opacity-50">/ 100</span>
+            <span id="memory-score">0</span>&nbsp;<span class="opacity-50"
+              >/ 100</span
+            >
           </p>
         </div>
         <div class="stat" style="background-color: hsla(166, 100%, 37%, 0.05)">
@@ -93,7 +97,9 @@
             <p class="ml-2 text-greenTeal">Verbal</p>
           </div>
           <p class="font-bold">
-            61 &nbsp;<span class="opacity-50">/ 100</span>
+            <span id="verbal-score">0</span>&nbsp;<span class="opacity-50"
+              >/ 100</span
+            >
           </p>
         </div>
         <div class="stat" style="background-color: hsla(234, 85%, 45%, 0.05)">
@@ -102,7 +108,9 @@
             <p class="ml-2 text-cobaltBlue">Visual</p>
           </div>
           <p class="font-bold">
-            72 &nbsp;<span class="opacity-50">/ 100</span>
+            <span id="visual-score">0</span>&nbsp;<span class="opacity-50"
+              >/ 100</span
+            >
           </p>
         </div>
         <button
@@ -121,5 +129,71 @@
         >vyonizr</a
       >.
     </footer>
+    <script>
+      const MIN_SCORE = 61
+      const MAX_SCORE = 92
+
+      function getRandomIntInclusive(min, max) {
+        min = Math.ceil(min);
+        max = Math.floor(max);
+        return Math.floor(Math.random() * (max - min + 1) + min);
+      }
+
+      document.getElementById(
+        "percentage"
+      ).innerText = `${getRandomIntInclusive(60, 70)}%`;
+
+      const scores = [
+        {
+          id: "reaction-score",
+          score: 0,
+        },
+        {
+          id: "memory-score",
+          score: 0,
+        },
+        {
+          id: "verbal-score",
+          score: 0,
+        },
+        {
+          id: "visual-score",
+          score: 0,
+        },
+      ];
+
+      scores.map((category) => {
+        category.score = getRandomIntInclusive(MIN_SCORE, MAX_SCORE);
+      });
+
+      const averageScore = Math.round(
+        scores.reduce((acc, score) => {
+          return acc + score.score;
+        }, 0) / scores.length
+      );
+
+      function animateNumber(id, start, end, duration) {
+        let current = start;
+        const increment = (end - start) / duration;
+        const element = document.getElementById(id);
+        const timer = setInterval(function () {
+          current += increment;
+          element.textContent = Math.floor(current);
+          if (current >= end) {
+            clearInterval(timer);
+            element.textContent = end;
+          }
+        }, 1);
+      }
+
+      animateNumber("average-score", 0, averageScore, 250);
+
+      for (let i = 0; i < scores.length; i++) {
+        const score = scores[i];
+        setTimeout(function () {
+          animateNumber(score.id, 0, score.score, 50);
+        }, 200 * i);
+      }
+    </script>
   </body>
 </html>
